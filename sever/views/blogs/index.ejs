@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %>
+
+<!--
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sashen | <%= title %></title>
+</head>
+-->
+
+<body>
+
+    <%- include('../partials/nav.ejs') %>
+
+    <!-- This 2 methord are same -->
+
+    <!--
+    <nav>
+        <div class="site-tittle">
+            <a href="/"><h1>Bloges</h1></a>
+            <p>Saahen hasindu site's</p>
+        </div>
+        <ul>
+            <li><a href="/">Bloges</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Bloges</a></li>
+        </ul>
+    </nav> 
+-->
+    
+    <div class="blogs content">
+        <h2>All Blogs</h2>
+
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+
+                <a class="single" href="/blogs/<%= blog._id %>">
+                    <h3 class="title"><%= blog.title %></h3>
+                    <p class="snippet"><%= blog.snippet %></p>
+                </a>
+            <% }) %>
+        <% } else { %>
+            <p>There are no blogs to display</p>
+            <% } %>
+
+    </div>
+
+    <%- include('../partials/footer.ejs') %>
+    
+</body>
+</html>
