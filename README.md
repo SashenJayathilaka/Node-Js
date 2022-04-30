@@ -60,7 +60,7 @@ pkgin -y install nodejs
 cd pkgsrc/lang/nodejs && bmake install
 ```
 
-#### Get a more idea about Installing Node.js via package manager https://nodejs.org/en/download/package-manager/#n
+#### Get a more idea about Installing Node.js via package manager https://nodejs.org/en/download/package-manager/#alpine-linux
 
 
 
